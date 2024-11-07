@@ -1,0 +1,31 @@
+
+---Downloaded files---
+The import files for: MeetingHive were successfully downloaded!
+Initial max execution time = 36000
+Files info:
+Site URL = https://magicpractitioners.test
+Data file = C:\laragon\www\magicpractitioners/wp-content/uploads/2024/10/demo-content-import-file_2024-10-14__19-29-02.xml
+Widget file = C:\laragon\www\magicpractitioners/wp-content/uploads/2024/10/demo-widgets-import-file_2024-10-14__19-29-02.json
+Customizer file = C:\laragon\www\magicpractitioners/wp-content/uploads/2024/10/demo-customizer-import-file_2024-10-14__19-29-02.dat
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Site (footer) : 
+
+Text - No Title - Imported
+Navigation Menu - Services - Imported
+Categories - Blog - Imported
+Navigation Menu - Social - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+

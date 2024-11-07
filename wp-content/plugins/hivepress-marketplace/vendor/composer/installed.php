@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => '1.3.11',
+        'version' => '1.3.11.0',
+        'reference' => 'b63689495d1d2441342e3f3359bf74ea470f3cf3',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => false,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => '1.3.11',
+            'version' => '1.3.11.0',
+            'reference' => 'b63689495d1d2441342e3f3359bf74ea470f3cf3',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'hivepress/hivepress-updates' => array(
+            'pretty_version' => '1.0.2',
+            'version' => '1.0.2.0',
+            'reference' => '1fa0b5d14d26f8752f46cae6545f047a837c845e',
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../hivepress/hivepress-updates',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'stripe/stripe-php' => array(
+            'pretty_version' => 'v8.12.0',
+            'version' => '8.12.0.0',
+            'reference' => '1b7b1ea75c744b8a9f55a0942112f8e822a6a482',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../stripe/stripe-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

@@ -943,3 +943,29 @@ Stack trace:
 [21-Nov-2024 07:17:24 UTC]   Automatic theme updates starting...
 [21-Nov-2024 07:17:24 UTC]   Automatic theme updates complete.
 [21-Nov-2024 07:17:24 UTC] Automatic updates complete.
+[21-Nov-2024 16:33:44 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php on line 324 and exactly 2 expected in C:\laragon\www\magicpractitioners\wp-content\plugins\woocommerce\includes\wc-user-functions.php:920
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): wc_maybe_store_user_agent('alex.kostritsa@...')
+#1 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\functions.php(53): do_action('wp_login', 'alex.kostritsa@...')
+#4 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(326): set_username_as_email(61)
+#5 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#6 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\magicpractitioners\wp-includes\user.php(2542): do_action('user_register', 61, Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(270): wp_insert_user(Array)
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\email-as-username-for-hivepress\includes\controllers\class-email-as-username-for-hivepress.php(114): HivePress\Models\User->save()
+#10 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1230): HivePress\Controllers\Email_As_Username_For_Hivepress->register_user(Object(WP_REST_Request))
+#11 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1063): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/hivepress/v1/u...', Array, NULL)
+#12 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#13 C:\laragon\www\magicpractitioners\wp-includes\rest-api.php(420): WP_REST_Server->serve_request('/hivepress/v1/u...')
+#14 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#15 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#16 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#17 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#18 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(813): WP->parse_request('')
+#19 C:\laragon\www\magicpractitioners\wp-includes\functions.php(1336): WP->main('')
+#20 C:\laragon\www\magicpractitioners\wp-blog-header.php(16): wp()
+#21 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#22 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\woocommerce\includes\wc-user-functions.php on line 920

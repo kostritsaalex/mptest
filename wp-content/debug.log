@@ -1,0 +1,945 @@
+[11-Nov-2024 15:29:34 UTC] Registration form fields: Array
+(
+    [email] => Array
+        (
+            [_order] => 10
+            [attributes] => Array
+                (
+                    [autocomplete] => email
+                )
+
+        )
+
+    [password] => Array
+        (
+            [required] => 1
+            [_order] => 20
+            [attributes] => Array
+                (
+                    [autocomplete] => new-password
+                )
+
+        )
+
+)
+
+[11-Nov-2024 15:29:53 UTC] Registration form fields: Array
+(
+    [email] => Array
+        (
+            [_order] => 10
+            [attributes] => Array
+                (
+                    [autocomplete] => email
+                )
+
+        )
+
+    [password] => Array
+        (
+            [required] => 1
+            [_order] => 20
+            [attributes] => Array
+                (
+                    [autocomplete] => new-password
+                )
+
+        )
+
+)
+
+[11-Nov-2024 15:29:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function custom_update_username_on_email_change(), 2 passed in C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php on line 324 and exactly 3 expected in C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\functions.php:63
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): custom_update_username_on_email_change(39, 'user')
+#1 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-hook.php(139): do_action('hivepress/v1/mo...', 39, 'user')
+#4 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(326): HivePress\Components\Hook->update_user(39)
+#5 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#6 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\magicpractitioners\wp-includes\user.php(2509): do_action('profile_update', 39, Object(WP_User), Array)
+#8 C:\laragon\www\magicpractitioners\wp-includes\user.php(2632): wp_insert_user(Array)
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(298): wp_update_user(Array)
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(445): HivePress\Models\User->save(Array)
+#11 [internal function]: HivePress\Models\Model->_save_value('display_name')
+#12 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(225): call_user_func_array(Array, Array)
+#13 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-user.php(215): HivePress\Models\Model->__call('save_display_na...', Array)
+#14 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\User->update_user(39, Object(HivePress\Models\User))
+#15 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#16 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#17 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-hook.php(131): do_action('hivepress/v2/mo...', 39, Object(HivePress\Models\User))
+#18 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(326): HivePress\Components\Hook->update_user(39)
+#19 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#20 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#21 C:\laragon\www\magicpractitioners\wp-includes\user.php(2509): do_action('profile_update', 39, Object(WP_User), Array)
+#22 C:\laragon\www\magicpractitioners\wp-includes\user.php(2632): wp_insert_user(Array)
+#23 C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\functions.php(86): wp_update_user(Array)
+#24 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(326): custom_set_username_after_registration(39)
+#25 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#26 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#27 C:\laragon\www\magicpractitioners\wp-includes\user.php(2542): do_action('user_register', 39, Array)
+#28 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(270): wp_insert_user(Array)
+#29 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\controllers\class-user.php(350): HivePress\Models\User->save()
+#30 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1230): HivePress\Controllers\User->register_user(Object(WP_REST_Request))
+#31 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1063): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/hivepress/v1/u...', Array, NULL)
+#32 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#33 C:\laragon\www\magicpractitioners\wp-includes\rest-api.php(420): WP_REST_Server->serve_request('/hivepress/v1/u...')
+#34 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#35 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#36 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#37 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#38 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(813): WP->parse_request('')
+#39 C:\laragon\www\magicpractitioners\wp-includes\functions.php(1336): WP->main('')
+#40 C:\laragon\www\magicpractitioners\wp-blog-header.php(16): wp()
+#41 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#42 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\functions.php on line 63
+[11-Nov-2024 15:29:54 UTC] Registration form fields: Array
+(
+    [email] => Array
+        (
+            [_order] => 10
+            [attributes] => Array
+                (
+                    [autocomplete] => email
+                )
+
+        )
+
+    [password] => Array
+        (
+            [required] => 1
+            [_order] => 20
+            [attributes] => Array
+                (
+                    [autocomplete] => new-password
+                )
+
+        )
+
+)
+
+[11-Nov-2024 15:34:12 UTC] Registration form fields: Array
+(
+    [email] => Array
+        (
+            [_order] => 10
+            [attributes] => Array
+                (
+                    [autocomplete] => email
+                )
+
+        )
+
+    [password] => Array
+        (
+            [required] => 1
+            [_order] => 20
+            [attributes] => Array
+                (
+                    [autocomplete] => new-password
+                )
+
+        )
+
+)
+
+[11-Nov-2024 15:34:12 UTC] User update - New values: user
+[11-Nov-2024 15:34:12 UTC] User update - New values: user
+[11-Nov-2024 15:34:12 UTC] Set username to email after registration: alex.kostritsa@tallium.com
+[11-Nov-2024 15:34:13 UTC] User update - New values: user
+[11-Nov-2024 15:34:13 UTC] User update - New values: user
+[11-Nov-2024 15:35:06 UTC] Registration form fields: Array
+(
+    [email] => Array
+        (
+            [_order] => 10
+            [attributes] => Array
+                (
+                    [autocomplete] => email
+                )
+
+        )
+
+    [password] => Array
+        (
+            [required] => 1
+            [_order] => 20
+            [attributes] => Array
+                (
+                    [autocomplete] => new-password
+                )
+
+        )
+
+)
+
+[11-Nov-2024 15:35:16 UTC] Registration form fields: Array
+(
+    [email] => Array
+        (
+            [_order] => 10
+            [attributes] => Array
+                (
+                    [autocomplete] => email
+                )
+
+        )
+
+    [password] => Array
+        (
+            [required] => 1
+            [_order] => 20
+            [attributes] => Array
+                (
+                    [autocomplete] => new-password
+                )
+
+        )
+
+)
+
+[11-Nov-2024 15:35:16 UTC] User update - New values: user
+[11-Nov-2024 15:35:16 UTC] User update - New values: user
+[11-Nov-2024 15:35:16 UTC] Set username to email after registration: alex.kostritsa@tallium.com
+[11-Nov-2024 15:35:17 UTC] User update - New values: user
+[11-Nov-2024 15:35:17 UTC] User update - New values: user
+[11-Nov-2024 15:37:07 UTC] Updated username to email: alex.kostritsa@tallium.com
+[11-Nov-2024 15:37:58 UTC] Updated username to email: alex.kostritsa@tallium.com
+[11-Nov-2024 15:38:50 UTC] PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, Closure given in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php:175
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php(175): trim(Object(Closure))
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(382): HivePress\Fields\Text->normalize()
+#2 [internal function]: HivePress\Fields\Field->set_value(Object(Closure))
+#3 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\traits\class-mutator.php(31): call_user_func(Array, Object(Closure))
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(211): HivePress\Fields\Field->set_property('value', Object(Closure))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Fields\Field->__construct(Array)
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(145): HivePress\Helpers\create_class_instance('\\HivePress\\Fiel...', Array)
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(407): HivePress\Models\Model->_set_fields(Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(205): HivePress\Models\Model->set_id('1')
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\queries\class-query.php(503): HivePress\Models\User->get(Object(WP_User))
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-request.php(117): HivePress\Queries\Query->get_by_id(Object(WP_User))
+#11 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Request->set_request_context('')
+#12 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#13 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#14 C:\laragon\www\magicpractitioners\wp-settings.php(700): do_action('init')
+#15 C:\laragon\www\magicpractitioners\wp-config.php(104): require_once('C:\\laragon\\www\\...')
+#16 C:\laragon\www\magicpractitioners\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#17 C:\laragon\www\magicpractitioners\wp-admin\admin.php(34): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\magicpractitioners\wp-admin\users.php(11): require_once('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php on line 175
+[11-Nov-2024 15:38:51 UTC] PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, Closure given in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php:175
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php(175): trim(Object(Closure))
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(382): HivePress\Fields\Text->normalize()
+#2 [internal function]: HivePress\Fields\Field->set_value(Object(Closure))
+#3 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\traits\class-mutator.php(31): call_user_func(Array, Object(Closure))
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(211): HivePress\Fields\Field->set_property('value', Object(Closure))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Fields\Field->__construct(Array)
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(145): HivePress\Helpers\create_class_instance('\\HivePress\\Fiel...', Array)
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(407): HivePress\Models\Model->_set_fields(Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(205): HivePress\Models\Model->set_id('1')
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\queries\class-query.php(503): HivePress\Models\User->get(Object(WP_User))
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-request.php(117): HivePress\Queries\Query->get_by_id(Object(WP_User))
+#11 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Request->set_request_context('')
+#12 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#13 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#14 C:\laragon\www\magicpractitioners\wp-settings.php(700): do_action('init')
+#15 C:\laragon\www\magicpractitioners\wp-config.php(104): require_once('C:\\laragon\\www\\...')
+#16 C:\laragon\www\magicpractitioners\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#17 C:\laragon\www\magicpractitioners\wp-blog-header.php(13): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php on line 175
+[11-Nov-2024 15:39:29 UTC] PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, Closure given in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php:175
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php(175): trim(Object(Closure))
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(382): HivePress\Fields\Text->normalize()
+#2 [internal function]: HivePress\Fields\Field->set_value(Object(Closure))
+#3 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\traits\class-mutator.php(31): call_user_func(Array, Object(Closure))
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(211): HivePress\Fields\Field->set_property('value', Object(Closure))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Fields\Field->__construct(Array)
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(145): HivePress\Helpers\create_class_instance('\\HivePress\\Fiel...', Array)
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(407): HivePress\Models\Model->_set_fields(Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(205): HivePress\Models\Model->set_id('1')
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\queries\class-query.php(503): HivePress\Models\User->get(Object(WP_User))
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-request.php(117): HivePress\Queries\Query->get_by_id(Object(WP_User))
+#11 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Request->set_request_context('')
+#12 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#13 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#14 C:\laragon\www\magicpractitioners\wp-settings.php(700): do_action('init')
+#15 C:\laragon\www\magicpractitioners\wp-config.php(104): require_once('C:\\laragon\\www\\...')
+#16 C:\laragon\www\magicpractitioners\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#17 C:\laragon\www\magicpractitioners\wp-admin\admin.php(34): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\magicpractitioners\wp-admin\users.php(11): require_once('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php on line 175
+[11-Nov-2024 15:39:30 UTC] PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, Closure given in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php:175
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php(175): trim(Object(Closure))
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(382): HivePress\Fields\Text->normalize()
+#2 [internal function]: HivePress\Fields\Field->set_value(Object(Closure))
+#3 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\traits\class-mutator.php(31): call_user_func(Array, Object(Closure))
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(211): HivePress\Fields\Field->set_property('value', Object(Closure))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Fields\Field->__construct(Array)
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(145): HivePress\Helpers\create_class_instance('\\HivePress\\Fiel...', Array)
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(407): HivePress\Models\Model->_set_fields(Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(205): HivePress\Models\Model->set_id('1')
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\queries\class-query.php(503): HivePress\Models\User->get(Object(WP_User))
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-request.php(117): HivePress\Queries\Query->get_by_id(Object(WP_User))
+#11 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Request->set_request_context('')
+#12 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#13 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#14 C:\laragon\www\magicpractitioners\wp-settings.php(700): do_action('init')
+#15 C:\laragon\www\magicpractitioners\wp-config.php(104): require_once('C:\\laragon\\www\\...')
+#16 C:\laragon\www\magicpractitioners\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#17 C:\laragon\www\magicpractitioners\wp-blog-header.php(13): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php on line 175
+[11-Nov-2024 15:40:54 UTC] PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, Closure given in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php:175
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php(175): trim(Object(Closure))
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(382): HivePress\Fields\Text->normalize()
+#2 [internal function]: HivePress\Fields\Field->set_value(Object(Closure))
+#3 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\traits\class-mutator.php(31): call_user_func(Array, Object(Closure))
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(211): HivePress\Fields\Field->set_property('value', Object(Closure))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Fields\Field->__construct(Array)
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(145): HivePress\Helpers\create_class_instance('\\HivePress\\Fiel...', Array)
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(407): HivePress\Models\Model->_set_fields(Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(205): HivePress\Models\Model->set_id('1')
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\queries\class-query.php(503): HivePress\Models\User->get(Object(WP_User))
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-request.php(117): HivePress\Queries\Query->get_by_id(Object(WP_User))
+#11 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Request->set_request_context('')
+#12 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#13 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#14 C:\laragon\www\magicpractitioners\wp-settings.php(700): do_action('init')
+#15 C:\laragon\www\magicpractitioners\wp-config.php(104): require_once('C:\\laragon\\www\\...')
+#16 C:\laragon\www\magicpractitioners\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#17 C:\laragon\www\magicpractitioners\wp-admin\admin.php(34): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\magicpractitioners\wp-admin\users.php(11): require_once('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php on line 175
+[11-Nov-2024 15:40:55 UTC] PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, Closure given in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php:175
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php(175): trim(Object(Closure))
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(382): HivePress\Fields\Text->normalize()
+#2 [internal function]: HivePress\Fields\Field->set_value(Object(Closure))
+#3 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\traits\class-mutator.php(31): call_user_func(Array, Object(Closure))
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(211): HivePress\Fields\Field->set_property('value', Object(Closure))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Fields\Field->__construct(Array)
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(145): HivePress\Helpers\create_class_instance('\\HivePress\\Fiel...', Array)
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(407): HivePress\Models\Model->_set_fields(Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(205): HivePress\Models\Model->set_id('1')
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\queries\class-query.php(503): HivePress\Models\User->get(Object(WP_User))
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-request.php(117): HivePress\Queries\Query->get_by_id(Object(WP_User))
+#11 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Request->set_request_context('')
+#12 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#13 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#14 C:\laragon\www\magicpractitioners\wp-settings.php(700): do_action('init')
+#15 C:\laragon\www\magicpractitioners\wp-config.php(104): require_once('C:\\laragon\\www\\...')
+#16 C:\laragon\www\magicpractitioners\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#17 C:\laragon\www\magicpractitioners\wp-blog-header.php(13): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php on line 175
+[11-Nov-2024 15:41:02 UTC] PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, Closure given in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php:175
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php(175): trim(Object(Closure))
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(382): HivePress\Fields\Text->normalize()
+#2 [internal function]: HivePress\Fields\Field->set_value(Object(Closure))
+#3 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\traits\class-mutator.php(31): call_user_func(Array, Object(Closure))
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(211): HivePress\Fields\Field->set_property('value', Object(Closure))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Fields\Field->__construct(Array)
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(145): HivePress\Helpers\create_class_instance('\\HivePress\\Fiel...', Array)
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(407): HivePress\Models\Model->_set_fields(Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(205): HivePress\Models\Model->set_id('1')
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\queries\class-query.php(503): HivePress\Models\User->get(Object(WP_User))
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-request.php(117): HivePress\Queries\Query->get_by_id(Object(WP_User))
+#11 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Request->set_request_context('')
+#12 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#13 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#14 C:\laragon\www\magicpractitioners\wp-settings.php(700): do_action('init')
+#15 C:\laragon\www\magicpractitioners\wp-config.php(104): require_once('C:\\laragon\\www\\...')
+#16 C:\laragon\www\magicpractitioners\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#17 C:\laragon\www\magicpractitioners\wp-admin\admin.php(34): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\magicpractitioners\wp-admin\users.php(11): require_once('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php on line 175
+[11-Nov-2024 15:41:03 UTC] PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, Closure given in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php:175
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php(175): trim(Object(Closure))
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(382): HivePress\Fields\Text->normalize()
+#2 [internal function]: HivePress\Fields\Field->set_value(Object(Closure))
+#3 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\traits\class-mutator.php(31): call_user_func(Array, Object(Closure))
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-field.php(211): HivePress\Fields\Field->set_property('value', Object(Closure))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Fields\Field->__construct(Array)
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(145): HivePress\Helpers\create_class_instance('\\HivePress\\Fiel...', Array)
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-model.php(407): HivePress\Models\Model->_set_fields(Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(205): HivePress\Models\Model->set_id('1')
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\queries\class-query.php(503): HivePress\Models\User->get(Object(WP_User))
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-request.php(117): HivePress\Queries\Query->get_by_id(Object(WP_User))
+#11 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Request->set_request_context('')
+#12 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#13 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#14 C:\laragon\www\magicpractitioners\wp-settings.php(700): do_action('init')
+#15 C:\laragon\www\magicpractitioners\wp-config.php(104): require_once('C:\\laragon\\www\\...')
+#16 C:\laragon\www\magicpractitioners\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#17 C:\laragon\www\magicpractitioners\wp-blog-header.php(13): require_once('C:\\laragon\\www\\...')
+#18 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#19 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-text.php on line 175
+[11-Nov-2024 15:51:30 UTC] Registration form fields: Array
+(
+    [email] => Array
+        (
+            [_order] => 10
+            [attributes] => Array
+                (
+                    [autocomplete] => email
+                )
+
+        )
+
+    [password] => Array
+        (
+            [required] => 1
+            [_order] => 20
+            [attributes] => Array
+                (
+                    [autocomplete] => new-password
+                )
+
+        )
+
+)
+
+[11-Nov-2024 15:51:31 UTC] Registration form fields: Array
+(
+    [email] => Array
+        (
+            [_order] => 10
+            [attributes] => Array
+                (
+                    [autocomplete] => email
+                )
+
+        )
+
+    [password] => Array
+        (
+            [required] => 1
+            [_order] => 20
+            [attributes] => Array
+                (
+                    [autocomplete] => new-password
+                )
+
+        )
+
+)
+
+[11-Nov-2024 15:51:39 UTC] Registration form fields: Array
+(
+    [email] => Array
+        (
+            [_order] => 10
+            [attributes] => Array
+                (
+                    [autocomplete] => email
+                )
+
+        )
+
+    [password] => Array
+        (
+            [required] => 1
+            [_order] => 20
+            [attributes] => Array
+                (
+                    [autocomplete] => new-password
+                )
+
+        )
+
+)
+
+[11-Nov-2024 15:51:39 UTC] User update - New values: user
+[11-Nov-2024 15:51:39 UTC] User update - New values: user
+[11-Nov-2024 15:51:39 UTC] Set username to email after registration: alex.kostritsa@tallium.com
+[11-Nov-2024 15:51:40 UTC] User update - New values: user
+[11-Nov-2024 15:51:40 UTC] User update - New values: user
+[11-Nov-2024 22:04:10 UTC] Automatic updates starting...
+[11-Nov-2024 22:04:12 UTC]   Automatic plugin updates starting...
+[11-Nov-2024 22:04:12 UTC]   Automatic plugin updates complete.
+[11-Nov-2024 22:04:13 UTC]   Automatic theme updates starting...
+[11-Nov-2024 22:04:13 UTC]   Automatic theme updates complete.
+[11-Nov-2024 22:04:13 UTC] Automatic updates complete.
+[12-Nov-2024 14:24:06 UTC] Automatic updates starting...
+[12-Nov-2024 14:24:08 UTC]   Automatic plugin updates starting...
+[12-Nov-2024 14:24:08 UTC]   Automatic plugin updates complete.
+[12-Nov-2024 14:24:08 UTC]   Automatic theme updates starting...
+[12-Nov-2024 14:24:08 UTC]   Automatic theme updates complete.
+[12-Nov-2024 14:24:08 UTC] Automatic updates complete.
+[14-Nov-2024 13:56:57 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php on line 59
+[14-Nov-2024 13:56:57 UTC] PHP Fatal error:  Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php:413
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(65): HivePress\Core->get_config(Array)
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(105): HivePress\Components\Form->get_field_options(Array, Array, 'UA07')
+#2 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Form->set_field_options(Array, Object(HivePress\Fields\Select))
+#3 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-select.php(213): apply_filters('hivepress/v1/fi...', Array, Object(HivePress\Fields\Select))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(332): HivePress\Fields\Select->set_value('UA07')
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(317): HivePress\Forms\Form->set_value('billing_state', 'UA07')
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(63): HivePress\Forms\Form->set_values(Array, true)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(113): HivePress\Forms\Model_Form->boot()
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(178): HivePress\Forms\User_Update->boot()
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(37): HivePress\Forms\Form->__construct(Array)
+#11 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(95): HivePress\Forms\Model_Form->__construct(Array)
+#12 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Forms\User_Update->__construct(Array)
+#13 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-form.php(111): HivePress\Helpers\create_class_instance('\\HivePress\\Form...', Array)
+#14 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Form->render()
+#15 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#16 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#17 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-page.php(66): HivePress\Blocks\Container->render()
+#18 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Page->render()
+#19 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-template.php(116): HivePress\Blocks\Container->render()
+#20 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\controllers\class-user.php(985): HivePress\Blocks\Template->render()
+#21 [internal function]: HivePress\Controllers\User->render_user_edit_settings_page()
+#22 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-router.php(658): call_user_func(Array)
+#23 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Router->set_page_template('C:\\laragon\\www\\...')
+#24 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters('C:\\laragon\\www\\...', Array)
+#25 C:\laragon\www\magicpractitioners\wp-includes\template-loader.php(104): apply_filters('template_includ...', 'C:\\laragon\\www\\...')
+#26 C:\laragon\www\magicpractitioners\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#27 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#28 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php on line 413
+[14-Nov-2024 13:57:04 UTC] Automatic updates starting...
+[14-Nov-2024 13:57:05 UTC]   Automatic plugin updates starting...
+[14-Nov-2024 13:57:05 UTC]   Automatic plugin updates complete.
+[14-Nov-2024 13:57:06 UTC]   Automatic theme updates starting...
+[14-Nov-2024 13:57:06 UTC]   Automatic theme updates complete.
+[14-Nov-2024 13:57:06 UTC] Automatic updates complete.
+[14-Nov-2024 14:03:43 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php on line 59
+[14-Nov-2024 14:03:43 UTC] PHP Fatal error:  Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php:413
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(65): HivePress\Core->get_config(Array)
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(105): HivePress\Components\Form->get_field_options(Array, Array, 'UA07')
+#2 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Form->set_field_options(Array, Object(HivePress\Fields\Select))
+#3 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-select.php(213): apply_filters('hivepress/v1/fi...', Array, Object(HivePress\Fields\Select))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(332): HivePress\Fields\Select->set_value('UA07')
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(317): HivePress\Forms\Form->set_value('billing_state', 'UA07')
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(63): HivePress\Forms\Form->set_values(Array, true)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(113): HivePress\Forms\Model_Form->boot()
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(178): HivePress\Forms\User_Update->boot()
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(37): HivePress\Forms\Form->__construct(Array)
+#11 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(95): HivePress\Forms\Model_Form->__construct(Array)
+#12 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Forms\User_Update->__construct(Array)
+#13 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-form.php(111): HivePress\Helpers\create_class_instance('\\HivePress\\Form...', Array)
+#14 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Form->render()
+#15 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#16 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#17 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-page.php(66): HivePress\Blocks\Container->render()
+#18 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Page->render()
+#19 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-template.php(116): HivePress\Blocks\Container->render()
+#20 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\controllers\class-user.php(985): HivePress\Blocks\Template->render()
+#21 [internal function]: HivePress\Controllers\User->render_user_edit_settings_page()
+#22 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-router.php(658): call_user_func(Array)
+#23 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Router->set_page_template('C:\\laragon\\www\\...')
+#24 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters('C:\\laragon\\www\\...', Array)
+#25 C:\laragon\www\magicpractitioners\wp-includes\template-loader.php(104): apply_filters('template_includ...', 'C:\\laragon\\www\\...')
+#26 C:\laragon\www\magicpractitioners\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#27 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#28 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php on line 413
+[14-Nov-2024 14:05:00 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php on line 59
+[14-Nov-2024 14:05:00 UTC] PHP Fatal error:  Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php:413
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(65): HivePress\Core->get_config(Array)
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(105): HivePress\Components\Form->get_field_options(Array, Array, 'UA07')
+#2 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Form->set_field_options(Array, Object(HivePress\Fields\Select))
+#3 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-select.php(213): apply_filters('hivepress/v1/fi...', Array, Object(HivePress\Fields\Select))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(332): HivePress\Fields\Select->set_value('UA07')
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(317): HivePress\Forms\Form->set_value('billing_state', 'UA07')
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(63): HivePress\Forms\Form->set_values(Array, true)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(113): HivePress\Forms\Model_Form->boot()
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(178): HivePress\Forms\User_Update->boot()
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(37): HivePress\Forms\Form->__construct(Array)
+#11 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(95): HivePress\Forms\Model_Form->__construct(Array)
+#12 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Forms\User_Update->__construct(Array)
+#13 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-form.php(111): HivePress\Helpers\create_class_instance('\\HivePress\\Form...', Array)
+#14 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Form->render()
+#15 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#16 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#17 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-page.php(66): HivePress\Blocks\Container->render()
+#18 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Page->render()
+#19 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-template.php(116): HivePress\Blocks\Container->render()
+#20 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\controllers\class-user.php(985): HivePress\Blocks\Template->render()
+#21 [internal function]: HivePress\Controllers\User->render_user_edit_settings_page()
+#22 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-router.php(658): call_user_func(Array)
+#23 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Router->set_page_template('C:\\laragon\\www\\...')
+#24 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters('C:\\laragon\\www\\...', Array)
+#25 C:\laragon\www\magicpractitioners\wp-includes\template-loader.php(104): apply_filters('template_includ...', 'C:\\laragon\\www\\...')
+#26 C:\laragon\www\magicpractitioners\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#27 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#28 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php on line 413
+[14-Nov-2024 14:16:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_states() on null in C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\inc\hivepress\hivepress-required-user-fields.php:140
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\functions.php(18): include()
+#1 C:\laragon\www\magicpractitioners\wp-settings.php(668): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\magicpractitioners\wp-config.php(104): require_once('C:\\laragon\\www\\...')
+#3 C:\laragon\www\magicpractitioners\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#4 C:\laragon\www\magicpractitioners\wp-blog-header.php(13): require_once('C:\\laragon\\www\\...')
+#5 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#6 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\inc\hivepress\hivepress-required-user-fields.php on line 140
+[14-Nov-2024 14:16:36 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_states() on null in C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\inc\hivepress\hivepress-required-user-fields.php:140
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\functions.php(18): include()
+#1 C:\laragon\www\magicpractitioners\wp-settings.php(668): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\magicpractitioners\wp-config.php(104): require_once('C:\\laragon\\www\\...')
+#3 C:\laragon\www\magicpractitioners\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#4 C:\laragon\www\magicpractitioners\wp-blog-header.php(13): require_once('C:\\laragon\\www\\...')
+#5 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#6 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\inc\hivepress\hivepress-required-user-fields.php on line 140
+[14-Nov-2024 14:33:55 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php on line 59
+[14-Nov-2024 14:33:55 UTC] PHP Fatal error:  Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php:413
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(65): HivePress\Core->get_config(Array)
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(105): HivePress\Components\Form->get_field_options(Array, Array, 'UA07')
+#2 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Form->set_field_options(Array, Object(HivePress\Fields\Select))
+#3 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-select.php(213): apply_filters('hivepress/v1/fi...', Array, Object(HivePress\Fields\Select))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(332): HivePress\Fields\Select->set_value('UA07')
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(317): HivePress\Forms\Form->set_value('billing_state', 'UA07')
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(63): HivePress\Forms\Form->set_values(Array, true)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(113): HivePress\Forms\Model_Form->boot()
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(178): HivePress\Forms\User_Update->boot()
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(37): HivePress\Forms\Form->__construct(Array)
+#11 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(95): HivePress\Forms\Model_Form->__construct(Array)
+#12 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Forms\User_Update->__construct(Array)
+#13 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-form.php(111): HivePress\Helpers\create_class_instance('\\HivePress\\Form...', Array)
+#14 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Form->render()
+#15 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#16 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#17 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-page.php(66): HivePress\Blocks\Container->render()
+#18 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Page->render()
+#19 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-template.php(116): HivePress\Blocks\Container->render()
+#20 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\controllers\class-user.php(985): HivePress\Blocks\Template->render()
+#21 [internal function]: HivePress\Controllers\User->render_user_edit_settings_page()
+#22 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-router.php(658): call_user_func(Array)
+#23 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Router->set_page_template('C:\\laragon\\www\\...')
+#24 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters('C:\\laragon\\www\\...', Array)
+#25 C:\laragon\www\magicpractitioners\wp-includes\template-loader.php(104): apply_filters('template_includ...', 'C:\\laragon\\www\\...')
+#26 C:\laragon\www\magicpractitioners\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#27 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#28 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php on line 413
+[14-Nov-2024 14:34:02 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php on line 59
+[14-Nov-2024 14:34:02 UTC] PHP Fatal error:  Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php:413
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(65): HivePress\Core->get_config(Array)
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(105): HivePress\Components\Form->get_field_options(Array, Array, 'UA07')
+#2 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Form->set_field_options(Array, Object(HivePress\Fields\Select))
+#3 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-select.php(213): apply_filters('hivepress/v1/fi...', Array, Object(HivePress\Fields\Select))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(332): HivePress\Fields\Select->set_value('UA07')
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(317): HivePress\Forms\Form->set_value('billing_state', 'UA07')
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(63): HivePress\Forms\Form->set_values(Array, true)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(113): HivePress\Forms\Model_Form->boot()
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(178): HivePress\Forms\User_Update->boot()
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(37): HivePress\Forms\Form->__construct(Array)
+#11 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(95): HivePress\Forms\Model_Form->__construct(Array)
+#12 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Forms\User_Update->__construct(Array)
+#13 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-form.php(111): HivePress\Helpers\create_class_instance('\\HivePress\\Form...', Array)
+#14 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Form->render()
+#15 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#16 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#17 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-page.php(66): HivePress\Blocks\Container->render()
+#18 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Page->render()
+#19 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-template.php(116): HivePress\Blocks\Container->render()
+#20 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\controllers\class-user.php(985): HivePress\Blocks\Template->render()
+#21 [internal function]: HivePress\Controllers\User->render_user_edit_settings_page()
+#22 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-router.php(658): call_user_func(Array)
+#23 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Router->set_page_template('C:\\laragon\\www\\...')
+#24 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters('C:\\laragon\\www\\...', Array)
+#25 C:\laragon\www\magicpractitioners\wp-includes\template-loader.php(104): apply_filters('template_includ...', 'C:\\laragon\\www\\...')
+#26 C:\laragon\www\magicpractitioners\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#27 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#28 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php on line 413
+[14-Nov-2024 14:34:06 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php on line 59
+[14-Nov-2024 14:34:06 UTC] PHP Fatal error:  Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php:413
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(65): HivePress\Core->get_config(Array)
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(105): HivePress\Components\Form->get_field_options(Array, Array, 'UA07')
+#2 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Form->set_field_options(Array, Object(HivePress\Fields\Select))
+#3 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-select.php(213): apply_filters('hivepress/v1/fi...', Array, Object(HivePress\Fields\Select))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(332): HivePress\Fields\Select->set_value('UA07')
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(317): HivePress\Forms\Form->set_value('billing_state', 'UA07')
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(63): HivePress\Forms\Form->set_values(Array, true)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(113): HivePress\Forms\Model_Form->boot()
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(178): HivePress\Forms\User_Update->boot()
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(37): HivePress\Forms\Form->__construct(Array)
+#11 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(95): HivePress\Forms\Model_Form->__construct(Array)
+#12 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Forms\User_Update->__construct(Array)
+#13 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-form.php(111): HivePress\Helpers\create_class_instance('\\HivePress\\Form...', Array)
+#14 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Form->render()
+#15 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#16 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#17 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-page.php(66): HivePress\Blocks\Container->render()
+#18 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Page->render()
+#19 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-template.php(116): HivePress\Blocks\Container->render()
+#20 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\controllers\class-user.php(985): HivePress\Blocks\Template->render()
+#21 [internal function]: HivePress\Controllers\User->render_user_edit_settings_page()
+#22 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-router.php(658): call_user_func(Array)
+#23 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Router->set_page_template('C:\\laragon\\www\\...')
+#24 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters('C:\\laragon\\www\\...', Array)
+#25 C:\laragon\www\magicpractitioners\wp-includes\template-loader.php(104): apply_filters('template_includ...', 'C:\\laragon\\www\\...')
+#26 C:\laragon\www\magicpractitioners\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#27 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#28 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php on line 413
+[14-Nov-2024 14:34:37 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php on line 59
+[14-Nov-2024 14:34:37 UTC] PHP Fatal error:  Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php:413
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(65): HivePress\Core->get_config(Array)
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(105): HivePress\Components\Form->get_field_options(Array, Array, 'UA51')
+#2 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Form->set_field_options(Array, Object(HivePress\Fields\Select))
+#3 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-select.php(213): apply_filters('hivepress/v1/fi...', Array, Object(HivePress\Fields\Select))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(332): HivePress\Fields\Select->set_value('UA51')
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(317): HivePress\Forms\Form->set_value('billing_state', 'UA51')
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\controllers\class-user.php(647): HivePress\Forms\Form->set_values(Array)
+#8 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1230): HivePress\Controllers\User->update_user(Object(WP_REST_Request))
+#9 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1063): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/hivepress/v1/u...', Array, NULL)
+#10 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#11 C:\laragon\www\magicpractitioners\wp-includes\rest-api.php(420): WP_REST_Server->serve_request('/hivepress/v1/u...')
+#12 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#13 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#14 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#15 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#16 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(813): WP->parse_request('')
+#17 C:\laragon\www\magicpractitioners\wp-includes\functions.php(1336): WP->main('')
+#18 C:\laragon\www\magicpractitioners\wp-blog-header.php(16): wp()
+#19 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#20 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php on line 413
+[14-Nov-2024 14:37:49 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php on line 59
+[14-Nov-2024 14:37:49 UTC] PHP Fatal error:  Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php:413
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(65): HivePress\Core->get_config(Array)
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(105): HivePress\Components\Form->get_field_options(Array, Array, 'UA51')
+#2 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Form->set_field_options(Array, Object(HivePress\Fields\Select))
+#3 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-select.php(213): apply_filters('hivepress/v1/fi...', Array, Object(HivePress\Fields\Select))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(332): HivePress\Fields\Select->set_value('UA51')
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(317): HivePress\Forms\Form->set_value('billing_state', 'UA51')
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\controllers\class-user.php(647): HivePress\Forms\Form->set_values(Array)
+#8 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1230): HivePress\Controllers\User->update_user(Object(WP_REST_Request))
+#9 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1063): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/hivepress/v1/u...', Array, NULL)
+#10 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#11 C:\laragon\www\magicpractitioners\wp-includes\rest-api.php(420): WP_REST_Server->serve_request('/hivepress/v1/u...')
+#12 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#13 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#14 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#15 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#16 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(813): WP->parse_request('')
+#17 C:\laragon\www\magicpractitioners\wp-includes\functions.php(1336): WP->main('')
+#18 C:\laragon\www\magicpractitioners\wp-blog-header.php(16): wp()
+#19 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#20 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php on line 413
+[14-Nov-2024 16:47:38 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php on line 324 and exactly 2 expected in C:\laragon\www\magicpractitioners\wp-content\plugins\woocommerce\includes\wc-user-functions.php:920
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): wc_maybe_store_user_agent('alex.kostritsa@...')
+#1 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\functions.php(53): do_action('wp_login', 'alex.kostritsa@...')
+#4 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(326): set_username_as_email(57)
+#5 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#6 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\magicpractitioners\wp-includes\user.php(2542): do_action('user_register', 57, Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(270): wp_insert_user(Array)
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\controllers\class-user.php(350): HivePress\Models\User->save()
+#10 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1230): HivePress\Controllers\User->register_user(Object(WP_REST_Request))
+#11 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1063): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/hivepress/v1/u...', Array, NULL)
+#12 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#13 C:\laragon\www\magicpractitioners\wp-includes\rest-api.php(420): WP_REST_Server->serve_request('/hivepress/v1/u...')
+#14 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#15 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#16 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#17 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#18 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(813): WP->parse_request('')
+#19 C:\laragon\www\magicpractitioners\wp-includes\functions.php(1336): WP->main('')
+#20 C:\laragon\www\magicpractitioners\wp-blog-header.php(16): wp()
+#21 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#22 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\woocommerce\includes\wc-user-functions.php on line 920
+[14-Nov-2024 17:59:46 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php on line 59
+[14-Nov-2024 17:59:46 UTC] PHP Fatal error:  Uncaught TypeError: Illegal offset type in isset or empty in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php:413
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(65): HivePress\Core->get_config(Array)
+#1 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-form.php(105): HivePress\Components\Form->get_field_options(Array, Array, 'UA07')
+#2 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Form->set_field_options(Array, Object(HivePress\Fields\Select))
+#3 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\fields\class-select.php(213): apply_filters('hivepress/v1/fi...', Array, Object(HivePress\Fields\Select))
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(332): HivePress\Fields\Select->set_value('UA07')
+#6 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(317): HivePress\Forms\Form->set_value('billing_state', 'UA07')
+#7 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(63): HivePress\Forms\Form->set_values(Array, true)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(113): HivePress\Forms\Model_Form->boot()
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-form.php(178): HivePress\Forms\User_Update->boot()
+#10 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-model-form.php(37): HivePress\Forms\Form->__construct(Array)
+#11 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\forms\class-user-update.php(95): HivePress\Forms\Model_Form->__construct(Array)
+#12 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(279): HivePress\Forms\User_Update->__construct(Array)
+#13 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-form.php(111): HivePress\Helpers\create_class_instance('\\HivePress\\Form...', Array)
+#14 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Form->render()
+#15 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#16 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Container->render()
+#17 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-page.php(66): HivePress\Blocks\Container->render()
+#18 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-container.php(109): HivePress\Blocks\Page->render()
+#19 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\blocks\class-template.php(116): HivePress\Blocks\Container->render()
+#20 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\controllers\class-user.php(985): HivePress\Blocks\Template->render()
+#21 [internal function]: HivePress\Controllers\User->render_user_edit_settings_page()
+#22 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-router.php(658): call_user_func(Array)
+#23 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Router->set_page_template('C:\\laragon\\www\\...')
+#24 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(205): WP_Hook->apply_filters('C:\\laragon\\www\\...', Array)
+#25 C:\laragon\www\magicpractitioners\wp-includes\template-loader.php(104): apply_filters('template_includ...', 'C:\\laragon\\www\\...')
+#26 C:\laragon\www\magicpractitioners\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#27 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#28 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php on line 413
+[14-Nov-2024 19:18:37 UTC] Automatic updates starting...
+[14-Nov-2024 19:18:38 UTC]   Automatic plugin updates starting...
+[14-Nov-2024 19:18:38 UTC]   Automatic plugin updates complete.
+[14-Nov-2024 19:18:39 UTC]   Automatic theme updates starting...
+[14-Nov-2024 19:18:39 UTC]   Automatic theme updates complete.
+[14-Nov-2024 19:18:39 UTC] Automatic updates complete.
+[20-Nov-2024 18:45:53 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it in C:\laragon\www\magicpractitioners\wp-includes\class-wpdb.php on line 1982
+[20-Nov-2024 18:46:54 UTC] Automatic updates starting...
+[20-Nov-2024 18:46:56 UTC]   Automatic plugin updates starting...
+[20-Nov-2024 18:46:56 UTC]   Automatic plugin updates complete.
+[20-Nov-2024 18:46:58 UTC]   Automatic theme updates starting...
+[20-Nov-2024 18:46:58 UTC]   Automatic theme updates complete.
+[20-Nov-2024 18:46:58 UTC] Automatic updates complete.
+[20-Nov-2024 18:52:05 UTC] PHP Fatal error:  Uncaught ReflectionException: Class "HivePress\controllers\email_as_username_for_hivepress" does not exist in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php:124
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php(124): ReflectionClass->__construct('HivePress\\contr...')
+#1 [internal function]: HivePress\Core->autoload('HivePress\\contr...')
+#2 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\helpers.php(273): class_exists('\\HivePress\\cont...')
+#3 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php(371): HivePress\Helpers\create_class_instance('\\HivePress\\cont...')
+#4 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-router.php(86): HivePress\Core->__call('get_controllers', Array)
+#5 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\components\class-router.php(411): HivePress\Components\Router->get_routes()
+#6 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): HivePress\Components\Router->add_rewrite_rules('')
+#7 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#8 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\laragon\www\magicpractitioners\wp-settings.php(700): do_action('init')
+#10 C:\laragon\www\magicpractitioners\wp-config.php(104): require_once('C:\\laragon\\www\\...')
+#11 C:\laragon\www\magicpractitioners\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#12 C:\laragon\www\magicpractitioners\wp-admin\admin.php(34): require_once('C:\\laragon\\www\\...')
+#13 C:\laragon\www\magicpractitioners\wp-admin\plugins.php(10): require_once('C:\\laragon\\www\\...')
+#14 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\class-core.php on line 124
+[20-Nov-2024 18:55:03 UTC] PHP Warning:  Undefined array key "custom_user_register_action" in C:\laragon\www\magicpractitioners\wp-content\plugins\email-as-username-for-hivepress\email-as-username-for-hivepress.php on line 29
+[20-Nov-2024 18:55:06 UTC] PHP Warning:  Undefined array key "custom_user_register_action" in C:\laragon\www\magicpractitioners\wp-content\plugins\email-as-username-for-hivepress\email-as-username-for-hivepress.php on line 29
+[20-Nov-2024 18:55:09 UTC] PHP Warning:  Undefined array key "custom_user_register_action" in C:\laragon\www\magicpractitioners\wp-content\plugins\email-as-username-for-hivepress\email-as-username-for-hivepress.php on line 29
+[20-Nov-2024 18:55:09 UTC] PHP Warning:  Undefined array key "custom_user_register_action" in C:\laragon\www\magicpractitioners\wp-content\plugins\email-as-username-for-hivepress\email-as-username-for-hivepress.php on line 29
+[20-Nov-2024 18:55:10 UTC] PHP Warning:  Undefined array key "custom_user_register_action" in C:\laragon\www\magicpractitioners\wp-content\plugins\email-as-username-for-hivepress\email-as-username-for-hivepress.php on line 29
+[20-Nov-2024 18:56:09 UTC] PHP Warning:  Undefined array key "custom_user_register_action" in C:\laragon\www\magicpractitioners\wp-content\plugins\email-as-username-for-hivepress\email-as-username-for-hivepress.php on line 29
+[20-Nov-2024 18:56:10 UTC] PHP Warning:  Undefined array key "custom_user_register_action" in C:\laragon\www\magicpractitioners\wp-content\plugins\email-as-username-for-hivepress\email-as-username-for-hivepress.php on line 29
+[20-Nov-2024 18:59:32 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php on line 324 and exactly 2 expected in C:\laragon\www\magicpractitioners\wp-content\plugins\woocommerce\includes\wc-user-functions.php:920
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): wc_maybe_store_user_agent('alex.kostritsa@...')
+#1 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\functions.php(53): do_action('wp_login', 'alex.kostritsa@...')
+#4 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(326): set_username_as_email(58)
+#5 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#6 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\magicpractitioners\wp-includes\user.php(2542): do_action('user_register', 58, Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(270): wp_insert_user(Array)
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\email-as-username-for-hivepress\includes\controllers\class-email-as-username-for-hivepress.php(116): HivePress\Models\User->save()
+#10 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1230): HivePress\Controllers\Email_As_Username_For_Hivepress->register_user(Object(WP_REST_Request))
+#11 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1063): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/hivepress/v1/u...', Array, NULL)
+#12 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#13 C:\laragon\www\magicpractitioners\wp-includes\rest-api.php(420): WP_REST_Server->serve_request('/hivepress/v1/u...')
+#14 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#15 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#16 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#17 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#18 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(813): WP->parse_request('')
+#19 C:\laragon\www\magicpractitioners\wp-includes\functions.php(1336): WP->main('')
+#20 C:\laragon\www\magicpractitioners\wp-blog-header.php(16): wp()
+#21 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#22 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\woocommerce\includes\wc-user-functions.php on line 920
+[20-Nov-2024 19:03:40 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php on line 324 and exactly 2 expected in C:\laragon\www\magicpractitioners\wp-content\plugins\woocommerce\includes\wc-user-functions.php:920
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): wc_maybe_store_user_agent('alex.kostritsa@...')
+#1 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\functions.php(53): do_action('wp_login', 'alex.kostritsa@...')
+#4 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(326): set_username_as_email(59)
+#5 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#6 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\magicpractitioners\wp-includes\user.php(2542): do_action('user_register', 59, Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(270): wp_insert_user(Array)
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\email-as-username-for-hivepress\includes\controllers\class-email-as-username-for-hivepress.php(114): HivePress\Models\User->save()
+#10 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1230): HivePress\Controllers\Email_As_Username_For_Hivepress->register_user(Object(WP_REST_Request))
+#11 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1063): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/hivepress/v1/u...', Array, NULL)
+#12 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#13 C:\laragon\www\magicpractitioners\wp-includes\rest-api.php(420): WP_REST_Server->serve_request('/hivepress/v1/u...')
+#14 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#15 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#16 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#17 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#18 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(813): WP->parse_request('')
+#19 C:\laragon\www\magicpractitioners\wp-includes\functions.php(1336): WP->main('')
+#20 C:\laragon\www\magicpractitioners\wp-blog-header.php(16): wp()
+#21 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#22 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\woocommerce\includes\wc-user-functions.php on line 920
+[20-Nov-2024 19:04:22 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function wc_maybe_store_user_agent(), 1 passed in C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php on line 324 and exactly 2 expected in C:\laragon\www\magicpractitioners\wp-content\plugins\woocommerce\includes\wc-user-functions.php:920
+Stack trace:
+#0 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): wc_maybe_store_user_agent('alex.kostritsa@...')
+#1 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\magicpractitioners\wp-content\themes\meetinghive-child\functions.php(53): do_action('wp_login', 'alex.kostritsa@...')
+#4 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(326): set_username_as_email(60)
+#5 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#6 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\laragon\www\magicpractitioners\wp-includes\user.php(2542): do_action('user_register', 60, Array)
+#8 C:\laragon\www\magicpractitioners\wp-content\plugins\hivepress\includes\models\class-user.php(270): wp_insert_user(Array)
+#9 C:\laragon\www\magicpractitioners\wp-content\plugins\email-as-username-for-hivepress\includes\controllers\class-email-as-username-for-hivepress.php(114): HivePress\Models\User->save()
+#10 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1230): HivePress\Controllers\Email_As_Username_For_Hivepress->register_user(Object(WP_REST_Request))
+#11 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(1063): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/hivepress/v1/u...', Array, NULL)
+#12 C:\laragon\www\magicpractitioners\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#13 C:\laragon\www\magicpractitioners\wp-includes\rest-api.php(420): WP_REST_Server->serve_request('/hivepress/v1/u...')
+#14 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(324): rest_api_loaded(Object(WP))
+#15 C:\laragon\www\magicpractitioners\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#16 C:\laragon\www\magicpractitioners\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#17 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#18 C:\laragon\www\magicpractitioners\wp-includes\class-wp.php(813): WP->parse_request('')
+#19 C:\laragon\www\magicpractitioners\wp-includes\functions.php(1336): WP->main('')
+#20 C:\laragon\www\magicpractitioners\wp-blog-header.php(16): wp()
+#21 C:\laragon\www\magicpractitioners\index.php(17): require('C:\\laragon\\www\\...')
+#22 {main}
+  thrown in C:\laragon\www\magicpractitioners\wp-content\plugins\woocommerce\includes\wc-user-functions.php on line 920
+[20-Nov-2024 19:09:08 UTC] Automatic updates starting...
+[20-Nov-2024 19:09:08 UTC]   Automatic plugin updates starting...
+[20-Nov-2024 19:09:08 UTC]   Automatic plugin updates complete.
+[20-Nov-2024 19:09:08 UTC]   Automatic theme updates starting...
+[20-Nov-2024 19:09:08 UTC]   Automatic theme updates complete.
+[20-Nov-2024 19:09:08 UTC] Automatic updates complete.
+[21-Nov-2024 07:17:21 UTC] Automatic updates starting...
+[21-Nov-2024 07:17:23 UTC]   Automatic plugin updates starting...
+[21-Nov-2024 07:17:23 UTC]   Automatic plugin updates complete.
+[21-Nov-2024 07:17:24 UTC]   Automatic theme updates starting...
+[21-Nov-2024 07:17:24 UTC]   Automatic theme updates complete.
+[21-Nov-2024 07:17:24 UTC] Automatic updates complete.

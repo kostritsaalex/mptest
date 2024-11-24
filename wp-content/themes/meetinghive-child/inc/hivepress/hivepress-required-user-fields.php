@@ -10,32 +10,28 @@ add_filter(
             'type' => 'select',
             'label' => __( 'Country', 'your-text-domain' ),
             'required' => true,
-
-
             'options' => WC()->countries->get_allowed_countries(), // Get allowed countries
-
-
             'class' => array('select2'), // Add class for Select2
         );
 
         $form['fields']['billing_state'] = array(
-            'type' => 'select',
-            'source' =>  rest_url('custom/v1/get-states-by-country'),
+            'type' => 'custom_select',
+         //   'source' =>  rest_url('custom/v1/get-states-by-country'),
              'label' => __( 'State', 'your-text-domain' ),
             'required' => true,
             'options' => [], // To be populated dynamically based on country
             'class' => array('select2'), // Add class for Select2
 
-            'attributes' => [
-                'data-parent' => 'billing_country',
-                'data-options' => wp_json_encode(
-                    [
-                        'action' => 'get_states'
-                    ]
-
-                )
-
-            ]
+//            'attributes' => [
+//                'data-parent' => 'billing_country',
+//                'data-options' => wp_json_encode(
+//                    [
+//                        'action' => 'get_states'
+//                    ]
+//
+//                )
+//
+//            ]
         );
 
         $form['fields']['billing_city'] = array(
@@ -71,6 +67,45 @@ add_action( 'wp_enqueue_scripts', function() {
         ));
     }
 });
+
+
+
+// Add this to your theme's functions.php or in a custom plugin file
+
+// Hook the function to WordPress
+add_action('wp_ajax_get_states', 'get_states_ajax_handler');
+add_action('wp_ajax_nopriv_get_states', 'get_states_ajax_handler');
+
+function get_states_ajax_handler() {
+    // Check for nonce security (you should add a nonce to your JS request)
+    // if ( ! wp_verify_nonce( $_POST['nonce'], 'get_states_nonce' ) ) {
+    //     die ( 'Busted!');
+    // }
+
+    // Ensure country is set
+    if (!isset($_POST['country'])) {
+        wp_send_json_error('Country not specified');
+    }
+
+    $country = sanitize_text_field($_POST['country']);
+
+    // Get WooCommerce states for the country
+    $states = WC()->countries->get_states($country);
+
+    // If states exist, return them
+    if ($states) {
+        wp_send_json($states);
+    } else {
+        // If no states, return an empty array
+        wp_send_json(array());
+    }
+
+    wp_die(); // Always include this to terminate the script properly
+}
+
+
+
+
 
 
 
